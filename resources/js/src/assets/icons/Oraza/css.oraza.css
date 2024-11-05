@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Iowan;
+    src: url("../../Iowan.otf");
+}
+.iowan{
+    font-family: Iowan;
+    font-size: 32;
+    font-weight: 900;
+    letter-spacing: "-0.02em";
+    text-align: "left";
+    -webkit-text-stroke: "1px  #1E376C";
+}

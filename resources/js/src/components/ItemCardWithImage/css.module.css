@@ -1,0 +1,387 @@
+/* item  card here */
+.card {
+    position: relative;
+    text-decoration: none;
+}
+
+.card > .image-wrapper > img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: -4px;
+    border-radius: 4px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.card > div > p {
+    margin: 0;
+    max-height: 42px;
+    letter-spacing: -0.02em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    color: var(--text-passive);
+}
+
+.card > div > .price-section {
+    margin: 8px 0;
+    color: var(--text);
+}
+
+.card > div > .price-section > b {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    margin-right: 4px;
+}
+
+.card > div > .price-section > span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+}
+
+.price-section > div {
+    margin-bottom: 4px;
+}
+
+/* item card end */
+
+/* item preview  */
+
+.item-viewer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 24px 24px 0px 0px;
+    isolation: isolate;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+    -khtml-transition: all 300ms;
+    animation: bounce 1s;
+    -webkit-animation: bounce 1s;
+    max-height: 90vh;
+    overflow-y: auto;
+    -webkit-border-radius: 24px 24px 0px 0px;
+    -moz-border-radius: 24px 24px 0px 0px;
+    -ms-border-radius: 24px 24px 0px 0px;
+    -o-border-radius: 24px 24px 0px 0px;
+    -ms-transition: all 300ms;
+}
+
+.item-viewer .closer {
+    /* position: absolute;
+    top: 24px; */
+    position: fixed;
+    margin-top: 24px;
+    right: 24px;
+    z-index: 99;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--blur, rgba(71, 71, 71, 0.3));
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    cursor: pointer;
+}
+.item-viewer .discount {
+    /* position: absolute;
+    top: 24px; */
+    position: fixed;
+    margin-top: 24px;
+    left: 24px;
+    padding: 8px 12px;
+    border-radius: 24px;
+    font-weight: 600;
+    text-align: center;
+    background: var(--blur, rgba(71, 71, 71, 0.3));
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    color: var(--general-white);
+    z-index: 99;
+}
+
+.item-viewer > .images {
+    background-color: var(--background);
+    max-width: 767px;
+    min-height: 150px;
+    margin: 0 auto;
+}
+
+.item-prices {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item-prices > li {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    color: var(--text-color);
+    background: var(--multiple-price, #f8f8f8);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.item-prices > li small {
+    color: var(--discount-price, #bebebe);
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 24px 24px 0 0;
+    min-height: 150px;
+    object-fit: contain;
+}
+
+.price-section > div > .percentage {
+    background-color: var(--sale);
+    color: var(--general-white);
+    display: inline-block;
+    padding: 2px 4px;
+    margin-right: 4px;
+    border-radius: 4px;
+}
+
+.price-section > div > .retired-price {
+    line-height: 20px;
+    text-decoration: line-through;
+    color: var(--discount-price);
+    text-decoration-color: var(--sale);
+}
+@keyframes bounce {
+    0% {
+        bottom: -200px;
+    }
+
+    50% {
+        bottom: 0px;
+        transform: translateY(-25px);
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+.placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fade-in 200ms forwards;
+    z-index: 999;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.item-info {
+    background-color: var(--background);
+}
+
+.item-info > div {
+    padding: 16px;
+    max-width: 767px;
+    margin: 0 auto;
+    color: var(--text);
+}
+
+.item-info h2 {
+    margin: 0 0 24px;
+    letter-spacing: -0.02em;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.item-info h3 {
+    color: var(--text-passive, #515151);
+    margin: 0 0 8px;
+}
+
+.item-info > span {
+    gap: 10px;
+    height: 80px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    display: block;
+    background-color: var(--primary);
+    color: var(--text-color);
+}
+.item-info > span > small {
+    color: var(--discount-price, #bebebe);
+    text-decoration: line-through;
+    margin-right: 8px;
+}
+
+.item-info p {
+    margin: 0 0 24px;
+}
+
+.images :global(.glide__bullets) {
+    background-color: red;
+    padding: 4px 8px;
+    border-radius: 16px;
+    background: var(--blur, rgba(71, 71, 71, 0.3));
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    bottom: 20px !important;
+    gap: 8px;
+}
+
+.images :global(.glide__bullets) > button {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+}
+
+.fixed-span {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (min-width: 767px) {
+    .item-viewer {
+        bottom: initial;
+        width: 794px;
+        height: auto;
+        left: 50%;
+        top: 50%;
+        right: initial;
+        padding: 16px;
+        transform: translate(-50%, -50%);
+        max-height: calc(100vh - 20%);
+        border-radius: 24px;
+        animation: none;
+        -webkit-animation: none;
+        overflow-y: auto;
+        -webkit-border-radius: 24px;
+        -moz-border-radius: 24px;
+        -ms-border-radius: 24px;
+        -o-border-radius: 24px;
+        background-color: var(--background);
+        display: inline-flex;
+        flex-direction: row;
+    }
+    .item-viewer > .images {
+        width: 360px;
+        border-radius: 24px;
+        margin: 0;
+    }
+    .item-info > div {
+        width: 352px;
+        max-width: 352px;
+    }
+    .item-info {
+        width: 50%;
+        padding: 0 24px;
+    }
+    .fixed-span {
+        position: relative;
+    }
+    .item-info h2 {
+        max-width: 325px;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: -0.48px;
+        margin: 8px 0 16.5px;
+    }
+    .item-viewer .closer {
+        margin-top: 0px;
+        right: 16px;
+    }
+    .images img {
+        width: 100%;
+        border-radius: 24px;
+        min-height: 40px;
+    }
+    .item-info > div {
+        padding: 0px;
+    }
+    .images :global(.glide__bullets) {
+        gap: 0px;
+        padding: 0;
+    }
+    .item-info h3 {
+        margin: 0 0 4px;
+    }
+    .images :global(.glide__bullets) {
+        background: none;
+        bottom: -72px !important;
+        overflow: scroll;
+        max-width: 100%;
+        flex-wrap: nowrap;
+    }
+    .item-info > span {
+        color: var(--text);
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 120%;
+        letter-spacing: -0.4px;
+        text-align: left;
+        height: fit-content;
+        background-color: transparent;
+    }
+    .item-viewer .discount {
+        margin-top: 16px;
+        left: 2em;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .card {
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .card > .image-wrapper > img {
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center top;
+    }
+    
+    .card:hover > .image-wrapper > img {
+        transform: scale(1.1);
+    }
+    .image-wrapper {
+        height: 204px;
+        width: 204px;
+        overflow: hidden;
+    }
+}

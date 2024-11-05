@@ -1,0 +1,114 @@
+.c-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: var(--background);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.c-navbar > div {
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 16px 0 16px 16px;
+    gap: 16px;
+    max-width: 868px;
+}
+
+.c-navbar .active {
+    color: red;
+    border-color: var(--primary);
+    background-color: var(--primary);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.c-navbar > div > a {
+    display: block;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    border: 1px solid var(--stroke);
+    border-radius: 4px;
+    color: inherit;
+}
+
+.c-navbar > div > div {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    overflow: auto;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    gap: 16px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.c-navbar > div > div::-webkit-scrollbar {
+    display: none;
+}
+
+.c-navbar > div > div > a {
+    border: 1px solid var(--stroke);
+    color: var(--text);
+    white-space: nowrap;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0px 10px;
+    border-radius: 4px;
+    letter-spacing: -0.02em;
+}
+
+.wrapper {
+    margin: 70px 0;
+    scroll-behavior: smooth;
+}
+
+/* item list here  */
+.item-list {
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 10px 16px;
+}
+
+.items {
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 10px 16px;
+}
+/* item list here  */
+
+.sections {
+    background-color: transparent;
+}
+
+.n-shadow {
+    -webkit-box-shadow: var(--navbar-shadow);
+    box-shadow: var(--navbar-shadow);
+}
+
+@media screen and (min-width: 768px) {
+    .item-list {
+        display: -ms-grid;
+        display: -moz-grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        padding: 10px 16px;
+    }
+    .c-navbar > div {
+        padding: 16px 0 16px 4px;
+    }
+}

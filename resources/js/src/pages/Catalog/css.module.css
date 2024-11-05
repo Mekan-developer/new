@@ -1,0 +1,229 @@
+.c-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: var(--background);
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.n-shadow {
+    -webkit-box-shadow: var(--navbar-shadow);
+    box-shadow: var(--navbar-shadow);
+}
+
+.c-navbar > header {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    margin: 0 auto;
+    max-width: 868px;
+}
+
+.c-navbar > header > h4 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.c-navbar > header > span {
+    width: 40px;
+    height: 40px;
+}
+
+.c-navbar > header > a {
+    display: block;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    color: inherit;
+}
+
+.items {
+    display: -ms-grid;
+    display: -moz-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 16px 24px;
+    margin: 0px 0 70px;
+}
+
+.card {
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-color: var(--primary);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    -o-object-fit: cover;
+    -o-object-position: center;
+    margin-bottom: -4px;
+    border-radius: 4px;
+}
+
+.card > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.card > .overlay {
+    background: var(--photo-overlay);
+}
+
+.card h5 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #fcfcfc;
+}
+
+/* here is dropdown content */
+
+.dropdown {
+    padding: 0 24px;
+    max-width: 767px;
+    margin: 0 auto 16px;
+    color: var(--text);
+}
+
+.dropdown > .btn {
+    border-radius: 4px;
+    border: 1px solid var(--Stroke, #e4e4e4);
+    background-color: transparent;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+}
+
+.dropdown .placeholder {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: var(--background-overlay);
+    animation: fade-in 200ms forwards;
+    z-index: 999;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.d-content {
+    background-color: var(--background);
+    width: 100%;
+    position: absolute;
+    border-radius: 24px 24px 0px 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    animation: bounce 1s;
+    -webkit-animation: bounce 750ms;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: -200px;
+    }
+    50% {
+        bottom: 0px;
+        transform: translateY(-25px);
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+.d-content {
+    padding: 40px 56px;
+}
+
+.d-content .cancel {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 8px 8px 4px;
+}
+
+.d-content > h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.d-content span {
+    display: block;
+    color: var(--general-white);
+    text-align: center;
+    background-color: var(--primary);
+    margin: 16px auto 0;
+    max-width: 250px;
+    text-decoration: none;
+    border-radius: 4px;
+    height: 48px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 48px;
+    letter-spacing: -0.02em;
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .items {
+        display: -ms-grid;
+        display: -moz-grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 16px;
+        padding: 16px 24px;
+        margin: 0px 0 70px;
+    }
+}

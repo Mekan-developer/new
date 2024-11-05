@@ -1,0 +1,50 @@
+/* @tailwind base; */
+@tailwind components;
+/* @tailwind utilities; */
+
+
+.ingradientActive{
+    display: none;
+}
+
+.addField{
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    background: #8bc34a;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.addedDiv1{
+    display: flex;
+    flex-flow: row;
+    justify-content: start;
+    margin-top: 4px;
+}
+
+.addedDiv2{
+    width: auto; margin:0 4px;
+}
+
+.delete{
+    text-decoration: none;
+    display: inline-block;
+    background: #f44336;
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

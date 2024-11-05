@@ -1,0 +1,29 @@
+.marquee {
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    height: 56px;
+}
+
+.marquee>div {
+    white-space: nowrap;
+    display: flex;
+}
+
+.marquee>div>div {
+    height: 56px;
+    display: inline-block;
+    padding: 13px 0;
+    transition: all .2s ease-out;
+    text-align: left;
+    letter-spacing: -0.4px;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+}
+
+.marquee>div>div::after {
+    content: "•";
+    margin: 0 16px;
+}
